@@ -25,8 +25,9 @@ app.get("/bad", (req, res) => {
   console.log(req.rawHeaders);
 
   // Send either 200 or 404
-  res.send("!Partial 200 response");
-  //res.status(404, "This is an example of the full message of a 404 response");
+  //res.send("!Partial 200 response");
+  res.status(404);
+  res.send("This is an example of the full message of a 404 response");
 });
 
 app.listen(port, () =>
